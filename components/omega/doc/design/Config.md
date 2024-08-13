@@ -71,7 +71,7 @@ of those parameters with the configuration.
 
 Because the configuration will also be used for provenance, it is likely
 that the configuration input file will need to be read by other languages
-outside of the OMEGA C++ model. This requires an ability to parse a
+outside of the Omega C++ model. This requires an ability to parse a
 configuration input file from other common languages (eg python).
 
 ### 2.11 Requirement: Optional or missing values
@@ -109,7 +109,7 @@ the standard format chosen.
 ## 4 Design
 
 We select the YAML format that meets the above requirements with
-improved readability over other standard forms. Within the OMEGA
+improved readability over other standard forms. Within the Omega
 model, we use the yaml-cpp library, a third-party implementation for
 parsing YAML input and efficiently storing/retrieving information
 as YAML nodes. Many of the configuration variables will be stored as
@@ -118,11 +118,11 @@ standard template library map type.
 
 Because extracting variables from a large and complex config
 structure is less efficient, we plan for a single reading of the
-full configuration. Each initialization routine in OMEGA will then
+full configuration. Each initialization routine in Omega will then
 extract needed variables and manipulate them as needed for the later
 forward integration. In this implementation, we will read/write the
 configuration from a master rank and each initialization routine
-within OMEGA will manipulate and broadcast necessary variables
+within Omega will manipulate and broadcast necessary variables
 across ranks for parallel execution. Because not all variables will
 need to be broadcast and many others will be converted to more
 efficient types (eg string options to logical or enums), we believe
@@ -205,7 +205,7 @@ omega:
 ### 4.2 Methods
 
 All of the methods in the YAML::Node class are obviously supported,
-but we will alias or wrap some of the most common in the OMEGA context
+but we will alias or wrap some of the most common in the Omega context
 to be associated with Config.
 
 #### 4.2.1 File read and master config
@@ -217,7 +217,7 @@ YAML configuration file using:
 Config omegaConfig = ConfigRead("omega.yml");
 ```
 
-where the argument is the name for the YAML input file. In OMEGA,
+where the argument is the name for the YAML input file. In Omega,
 we will retain this master configuration throughout the initialization
 as omegaConfig.
 

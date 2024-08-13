@@ -3,7 +3,7 @@
 
 ## 1 Overview
 
-Within OMEGA, we will need a method for profiling aspects
+Within Omega, we will need a method for profiling aspects
 of code performance. In the most simple form, this requires
 the ability to report the time spent in various sections of
 code. It may also be desirable to track other aspects of
@@ -63,7 +63,7 @@ granularity and more detail if desired.
 
 ### 2.7 Requirement: MPI context
 
-Because OMEGA allows portions of code to run on a subset
+Because Omega allows portions of code to run on a subset
 of processors or alternative parallel decompositions, the
 timers must be able to distinguish the context so that
 statistics across MPI tasks are computed correctly.

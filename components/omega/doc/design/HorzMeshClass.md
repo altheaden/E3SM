@@ -3,13 +3,13 @@
 
 ## 1 Overview
 
-The mesh class will contain the Kokkos arrays which describe the horizontal mesh and are used in the computation of the tendency terms in the discrete governing equations. OMEGA will separate the horizontal mesh variables from the vertical mesh information.
+The mesh class will contain the Kokkos arrays which describe the horizontal mesh and are used in the computation of the tendency terms in the discrete governing equations. Omega will separate the horizontal mesh variables from the vertical mesh information.
 
 ## 2 Requirements
 
-### 2.1 Requirement: OMEGA will use the previously established MPAS Mesh Spec
+### 2.1 Requirement: Omega will use the previously established MPAS Mesh Spec
 
-The OMEGA mesh information should be compatible with the [MPAS Mesh Specification](https://mpas-dev.github.io/files/documents/MPAS-MeshSpec.pdf).
+The Omega mesh information should be compatible with the [MPAS Mesh Specification](https://mpas-dev.github.io/files/documents/MPAS-MeshSpec.pdf).
 
 ### 2.2 Requirement: Functionality is needed to read the mesh on the host and transfer relevant data to the device for computation
 
@@ -39,7 +39,7 @@ The Mesh class will have a method to read in the mesh information not obtained b
 This flexibility is required to support future implementations of spatially split barotropic and baroclinic modes that are computed on different resolution meshes.
 Additionally, this flexibility can be used to support separate domain decompositions for the barotropic and baroclinic meshes, which can help optimize the communication frequency for the barotropic subcycling via wide barotropic halos.
 
-### 2.8 Desired: OMEGA can read in a reduced number of mesh variables and compute the remaining array information online.
+### 2.8 Desired: Omega can read in a reduced number of mesh variables and compute the remaining array information online.
 
 Many of the mesh variables are not independent, e.g.  areaCell, weightsOnEdge, etc., and can be computed from a reduced set of mesh variables.
 This functionality could be used to reduce mesh/restart file size for high resolution meshes.

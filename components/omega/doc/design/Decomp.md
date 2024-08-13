@@ -5,8 +5,8 @@
 
 ## 1 Overview
 
-For parallel execution, OMEGA will utilize a hierarchical parallelism with the
-coarse-grained parallelism achieved via message passing. An OMEGA mesh will be
+For parallel execution, Omega will utilize a hierarchical parallelism with the
+coarse-grained parallelism achieved via message passing. An Omega mesh will be
 decomposed into subdomains so that computations on each sub domain can proceed
 in parallel and messages will be passed to communicate data between domains.
 This document describes the requirements and design of this domain

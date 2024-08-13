@@ -1,4 +1,4 @@
-<!--- OMEGA global reductions requirements and design ------------------------->
+<!--- Omega global reductions requirements and design ------------------------->
 
 (omega-design-global-reductions)=
 
@@ -7,7 +7,7 @@
 
 ## 1 Overview
 
-In a parallel application like OMEGA, it is often necessary to perform
+In a parallel application like Omega, it is often necessary to perform
 averages, sums or other global collective operations on the distributed
 data. These reductions are described here.
 
@@ -56,7 +56,7 @@ to relax this restriction in the future.
 
 ### 2.7 Requirement: Other environments/decompositions
 
-Because OMEGA supports multiple machine environments (communicators
+Because Omega supports multiple machine environments (communicators
 and processor sets) and decompositions, the reductions must be
 callable from environments other than the default.
 

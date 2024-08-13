@@ -3,9 +3,9 @@
 
 ## 1 Overview
 
-Data type aliases are a useful means for managing precision within OMEGA and
+Data type aliases are a useful means for managing precision within Omega and
 to improve readability for for Kokkos array data types. This header file
-defines a number of aliases to common data types used throughout OMEGA.
+defines a number of aliases to common data types used throughout Omega.
 
 
 ## 2 Requirements
@@ -14,13 +14,13 @@ defines a number of aliases to common data types used throughout OMEGA.
 ### 2.1 Requirement: Both flexible and fixed floating point
 
 We wish to explore mixed precision and lower precision floating point within
-OMEGA so require both a generic floating point type that can be switched at
+Omega so require both a generic floating point type that can be switched at
 compile time as well as explicit single and double-precision (32-bit, 64-bit)
 types to enforce precision where needed.
 
 ### 2.2 Desired: Readability for array types
 
-OMEGA will be using Kokkos array data types which have a long syntax. For
+Omega will be using Kokkos array data types which have a long syntax. For
 readability, these should be aliased to a shorter, intuitive data type.
 
 ### 2.3 Desired: Fixed width integer types

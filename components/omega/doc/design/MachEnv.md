@@ -3,21 +3,21 @@
 
 ## 1 Overview
 
-On startup, OMEGA will need to initialize the message-passing and other
+On startup, Omega will need to initialize the message-passing and other
 environments and set up parameters related to machine layout, messaging,
-and hardware for use throughout OMEGA.
+and hardware for use throughout Omega.
 
 
 ## 2 Requirements
 
 ### 2.1 Requirement: Initialize MPI in Standalone
 
-In standalone mode, OMEGA will need to initialize the MPI environment
+In standalone mode, Omega will need to initialize the MPI environment
 and define a default communicator.
 
 ### 2.2 Requirement: Create MPI communicator in coupled mode
 
-When running as part of a coupled system, OMEGA will need to define a default
+When running as part of a coupled system, Omega will need to define a default
 communicator based on a parent communicator sent by the calling routine
 (coupler or parent model).
 
@@ -47,7 +47,7 @@ when running in coupled mode with other components also using the same rank.
 
 ### 2.7 Desired: Multiple environments
 
-In OMEGA, we may wish to run sub-components on different partitions. For
+In Omega, we may wish to run sub-components on different partitions. For
 example, we might want to rearrange the communication-dominated
 barotropic solve to run on fewer nodes or within a single node. We will
 need to be able to create new environments based on a subset of an
@@ -115,7 +115,7 @@ class MachEnv {
 #### 4.1.3 Default environment
 
 We will keep a default environment `OMEGA::defaultEnv` as a public
-static instantiation that will be used by most of the OMEGA infrastructure.
+static instantiation that will be used by most of the Omega infrastructure.
 If other environments are created, they must be maintained by the
 defining routines or sub-components.
 
@@ -124,7 +124,7 @@ defining routines or sub-components.
 #### 4.2.1 Initialization
 
 There will be two forms of the initialization routines. One of
-these two must be called as early as possible in OMEGA initialization
+these two must be called as early as possible in Omega initialization
 (typically the first call). Both forms will return an integer
 error code and will define the default environment `OMEGA::defaultEnv`.
 

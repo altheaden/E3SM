@@ -4,13 +4,13 @@
 
 ## 1 Overview
 
-The OMEGA model must be able to read and write data to a filesystem.
+The Omega model must be able to read and write data to a filesystem.
 For performance at high resolution, much of this IO must occur in parallel
 and interact with a high-performance filesystem. We describe here an IO
 layer that provides interfaces to the underlying SCORPIO parallel I/O
 library used in E3SM. It primarily provides a translation layer to
-read/write OMEGA metadata and Kokkos arrays. It works together with the
-OMEGA Metadata and IOStreams capabilities. Users will interact with
+read/write Omega metadata and Kokkos arrays. It works together with the
+Omega Metadata and IOStreams capabilities. Users will interact with
 IO primarily through the IOStreams and should not need to access this
 layer directly.
 
@@ -73,7 +73,7 @@ so an option to convert data to reduced precision is needed.
 
 ### 2.8 Requirement: Kokkos arrays and host/device support
 
-Distributed data in OMEGA is stored as Kokkos array types.
+Distributed data in Omega is stored as Kokkos array types.
 We must be able to read/write Kokkos arrays and be able
 to move data between host and device as needed.
 
@@ -110,11 +110,11 @@ publications.
 
 ## 4 Design
 
-The OMEGA model I/O will be built on top of the SCORPIO
+The Omega model I/O will be built on top of the SCORPIO
 parallel I/O library used across E3SM components. The
 I/O interfaces here generally provide wrappers for
-translating internal OMEGA metadata representations and
-Kokkos array types to the form required by SCORPIO. OMEGA
+translating internal Omega metadata representations and
+Kokkos array types to the form required by SCORPIO. Omega
 users and developers will generally interact with I/O
 through the IO Streams layer that manages all files and
 associated file contents.
@@ -123,7 +123,7 @@ associated file contents.
 
 #### 4.1.1 Parameters
 
-There will be a section in the input OMEGA configuration file
+There will be a section in the input Omega configuration file
 for managing overall parallel IO options. Currently, this
 will include three variables:
 

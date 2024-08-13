@@ -69,7 +69,7 @@ multiple arrays into the same buffer to reduce the number of messages.
 
 ### 2.10 Desired: Multiple environments/decompositions
 
-OMEGA runs may contain multiple communication environments or mesh
+Omega runs may contain multiple communication environments or mesh
 decompositions, would need to be able to perform halo exchanges in these
 circumstances.
 

@@ -5,11 +5,11 @@
 
 ## 1 Overview
 
-All data files from OMEGA and E3SM must be in a self-describing format
+All data files from Omega and E3SM must be in a self-describing format
 to enable easier analysis, archiving and provenance. We describe here
-requirements and design for managing metadata within the OMEGA code
+requirements and design for managing metadata within the Omega code
 itself to enable appropriate metadata in all model output. The capabilities
-described here must interact with other parts of the I/O within OMEGA,
+described here must interact with other parts of the I/O within Omega,
 particularly the lower-level I/O interfaces that
 perform the actual reading/writing to disk and the management of
 files or streams and their contents.
@@ -18,7 +18,7 @@ files or streams and their contents.
 
 ### 2.1 Requirement: Data types
 
-Metadata can be in all supported OMEGA data types (I4, I8, R4, R8,
+Metadata can be in all supported Omega data types (I4, I8, R4, R8,
 Boolean/logical, strings). Initially only scalar metadata
 is required, but extending to vectors/arrays may be desirable.
 
@@ -46,9 +46,9 @@ standard CF name (if exists), `_FillValue`, valid min/max and dimensions.
 ### 2.5 Requirement: Dimensions
 
 For array variables, a definition of each dimension used is required.
-In an unstructured model like OMEGA, the dimension describes the
+In an unstructured model like Omega, the dimension describes the
 global extent of the index space for each dimension that is then paired
-with mesh fields for the full description of OMEGA coordinate locations.
+with mesh fields for the full description of Omega coordinate locations.
 For time dimensions, we require support for both a fixed length time
 dimension (e.g. to support multiple time levels in a restart) as well
 as an unlimited dimension to support time series.

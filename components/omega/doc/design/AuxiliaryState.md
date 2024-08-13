@@ -4,7 +4,7 @@
 ## 1 Overview
 
 The auxiliary state class will provide a container for the auxiliary variables
-on a subdomain within OMEGA. It will provide methods for computing the
+on a subdomain within Omega. It will provide methods for computing the
 variables and it will register fields with IOStreams.
 
 ## 2 Requirements

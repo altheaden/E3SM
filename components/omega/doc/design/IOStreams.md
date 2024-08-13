@@ -5,7 +5,7 @@
 
 ## 1 Overview
 
-OMEGA must be able to read and write data throughout a simulation.
+Omega must be able to read and write data throughout a simulation.
 Data can be read or written either once or periodically. Files
 will contain different fields to read/write. We consider each file
 or file sequence an IO stream with its own unique set of properties.
@@ -32,7 +32,7 @@ required.
 
 Users must be able to supply a list of fields to be included in
 each stream. This contents list should be checked against
-available fields (from OMEGA defined metadata and metadata groups)
+available fields (from Omega defined metadata and metadata groups)
 and exit if a field is not available.
 
 ### 2.4 Requirement: Exact restart
@@ -56,7 +56,7 @@ name of the last restart and continue the simulation.
 
 The user must be able to specify a time interval for any
 repeating input and output streams (eg monthly output).
-The time interval can be any interval supported by the OMEGA
+The time interval can be any interval supported by the Omega
 time manager.
 
 ### 2.7 Requirement: Optional start/stop times

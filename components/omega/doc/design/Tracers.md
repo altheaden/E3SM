@@ -6,7 +6,7 @@
 Tracers are either heat (temperature) or material carried by a
 fluid parcel (eg salt, chemical or biological constituents). Here
 we describe a tracer module that manages how tracers are defined,
-described, stored and accessed throughout OMEGA. For reasons
+described, stored and accessed throughout Omega. For reasons
 outlined in the requirements below, we do not address
 the specific methods or algorithms for transporting or mixing
 tracers here. Those algorithms will be covered in other

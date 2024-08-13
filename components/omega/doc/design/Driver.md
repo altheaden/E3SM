@@ -3,8 +3,8 @@
 
 ## 1 Overview
 
-OMEGA can be used as either a standalone ocean model or as
-the ocean component of E3SM. In either case, OMEGA requires a
+Omega can be used as either a standalone ocean model or as
+the ocean component of E3SM. In either case, Omega requires a
 top-level driver and interface layer. Here we describe the
 requirements and design of both the standalone driver (main)
 and the component interface for coupled simulation.
@@ -13,16 +13,16 @@ and the component interface for coupled simulation.
 
 ### 2.1 Requirement: Component interfaces
 
-When running as part of a larger coupled model, OMEGA must
+When running as part of a larger coupled model, Omega must
 supply initialize, run and finalize methods. These routines
 must export all variables needed by the parent model while also
-importing all fields needed by OMEGA. In most cases, there will
+importing all fields needed by Omega. In most cases, there will
 also need to be a thin wrapper to translate data types between
-the parent model and internal OMEGA data types.
+the parent model and internal Omega data types.
 
 ### 2.2 Requirement: Standalone driver
 
-When OMEGA is used as a standalone model, it must supply a
+When Omega is used as a standalone model, it must supply a
 driver or main routine. For consistency with coupled
 simulations, this driver must mimic a parent coupled model,
 calling the same init, run and finalize methods and supplying
@@ -32,9 +32,9 @@ any needed data (eg surface forcing data).
 
 Communication with the parent model or standalone driver must
 be through the component interfaces as method arguments. All
-other aspects of the OMEGA model and model state that need to
+other aspects of the Omega model and model state that need to
 be retained across component calls or subsequent run intervals
-must be stored internally within OMEGA as static variables.
+must be stored internally within Omega as static variables.
 
 ### 2.4 Requirement: Managing environments
 
@@ -85,7 +85,7 @@ layer will be needed for translating between internal Omega
 data types and E3SM (or other parent model) data types and
 ensuring the model is synchronized correctly with the parent.
 
-Within the directory structure of OMEGA, the `src/driver`
+Within the directory structure of Omega, the `src/driver`
 directory will contain two subdirectories called standalone
 and E3SM. The standalone subdirectory will contain the
 standalone driver (obviously) and the E3SM directory will
@@ -214,14 +214,14 @@ int main(int argc, char **argv) {
       // call run method
       Err = OMEGA::OcnRun(CurrTime, RunInterval, EndAlarm,
                           CurrState, etc);
-      if (Err != 0) LOG_ERROR("Error advancing Omega one interval");
+      if (Err != 0) LOG_ERROR("Error advancing OMEGA one interval");
 
       // Other tasks if needed (eg IO could occur here or within run
       // method
    }
 
    int Err2 = OMEGA::OcnFinalize(CurrTime, CurrState, etc);
-   if (Err2 != 0) LOG_ERROR("Error finalizing Omega");
+   if (Err2 != 0) LOG_ERROR("Error finalizing OMEGA");
 
    int ErrAll = abs(Err) + abs(Err2);
    if (ErrAll == 0){

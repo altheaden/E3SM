@@ -5,7 +5,7 @@
 
 In a parallel environment, it is often useful to broadcast values from
 one MPI Rank to the others. In particular, the current design for
-OMEGA configuration requires us to broadcast many aspects of that
+Omega configuration requires us to broadcast many aspects of that
 configuration from the master rank to all others.
 
 ## 2 Requirements
@@ -27,7 +27,7 @@ we must be able to support broadcasting from any rank.
 
 ### 2.4 Desired: Broadcast within alternative environments
 
-OMEGA plans to support subset partitions of the domain for sub-models,
+Omega plans to support subset partitions of the domain for sub-models,
 so we must be able to broadcast only within these sub-groups using
 the appropriate communicator.
 
@@ -42,7 +42,7 @@ No algorithms needed beyond the MPI broadcast internal algorithm.
 
 ## 4 Design
 
-The OMEGA broadcast is mostly just wrappers around the MPI broadcast
+The Omega broadcast is mostly just wrappers around the MPI broadcast
 function with simplified arguments.
 
 ### 4.1 Data types and parameters

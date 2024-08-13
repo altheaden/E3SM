@@ -3,7 +3,7 @@
 
 ## 1 Overview
 
-The state class will provide a container for the prognostic (normal velocity and layer thickness) variables on a subdomain within OMEGA.
+The state class will provide a container for the prognostic (normal velocity and layer thickness) variables on a subdomain within Omega.
 It will have functionality for registering fields with IOStreams and performing time level updates.
 This will also be a data type that can be used for tendency terms and provis variables within the timestepping scheme.
 

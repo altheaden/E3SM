@@ -3,7 +3,7 @@
 
 ## 1 Overview
 
-The tendency terms in OMEGA are implemented as functors, which define an operation over a number of vertical levels for particular a cell, edge, or vertex.
+The tendency terms in Omega are implemented as functors, which define an operation over a number of vertical levels for particular a cell, edge, or vertex.
 Tendency functors take information which remains constant during the forward simulation (such as `HorzMesh` and `Config`)  as constructor arguments.
 The `operator()` method is overloaded with the relevant discrete /parameterization.
 This approach allows for a modularization of the tendency terms that enables flexible groupings of work within larger cell/edge/vertex loops.
